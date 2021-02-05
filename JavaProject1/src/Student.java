@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
+public class Student implements Nameable{
+    private String studentName;
     private List<Double> studentGrades = new ArrayList<Double>();
 
-    public Student(List<Double> grades){
+    public Student(String studentName,List<Double> grades){
+        this.studentName = studentName;
         this.studentGrades = grades;
     }
 
@@ -17,4 +19,9 @@ public class Student {
         return averageGrade;
     }
 
+
+    @Override
+    public String getName() {
+        return studentName;
+    }
 }
