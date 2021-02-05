@@ -13,7 +13,7 @@ class NaughtyStudentTest {
         grades.add(15.0);
         grades.add(15.0);
         grades.add(15.0);
-        NaughtyStudent naughtyStd = new NaughtyStudent(grades);
+        NaughtyStudent naughtyStd = new NaughtyStudent("ken",grades);
         Assertions.assertTrue(naughtyStd.getNaughtyAverageGrade() > naughtyStd.getAverageGrade());
 
 //        Assertions.assertEquals(16.5, naughtyStd.getNaughtyAverageGrade());

@@ -14,7 +14,7 @@ class StudentTest {
         grades.add(15.0);
         grades.add(15.0);
         grades.add(15.0);
-        Student std = new Student(grades);
+        Student std = new Student("joe",grades);
         Assertions.assertEquals(15.0, std.getAverageGrade());
     }
 }
