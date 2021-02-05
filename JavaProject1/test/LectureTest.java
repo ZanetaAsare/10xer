@@ -38,3 +38,4 @@ class LectureTest {
         Assertions.assertEquals(17, studentGroup.getHighestAverageGrade());
     }
 }
+
