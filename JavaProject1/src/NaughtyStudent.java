@@ -4,7 +4,7 @@ public class NaughtyStudent extends Student{
 
 
     public NaughtyStudent(String studentName,List<Double> grades) {
-        super(studentName,grades);
+        super(studentName,grades, Level.second);
     }
 
     public double getNaughtyAverageGrade(){

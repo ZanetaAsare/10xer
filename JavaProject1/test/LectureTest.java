@@ -14,19 +14,19 @@ class LectureTest {
         grades1.add(15.0);
         grades1.add(15.0);
         grades1.add(15.0);
-        Student std1 = new Student("Zane",grades1);
+        Student std1 = new Student("Zane",grades1, Level.first);
 
         List<Double> grades2 = new ArrayList<Double>();
         grades2.add(16.0);
         grades2.add(16.0);
         grades2.add(16.0);
-        Student std2 = new Student("Yao",grades2);
+        Student std2 = new Student("Yao",grades2, Level.second);
 
         List<Double> grades3 = new ArrayList<Double>();
         grades3.add(17.0);
         grades3.add(17.0);
         grades3.add(17.0);
-        Student std3 = new Student("Ken",grades3);
+        Student std3 = new Student("Ken",grades3, Level.third);
 
         List<Student> studentList = new ArrayList<Student>();
         studentList.add(std1);

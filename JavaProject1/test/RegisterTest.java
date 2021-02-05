@@ -14,19 +14,19 @@ class RegisterTest {
         grades1.add(15.0);
         grades1.add(15.0);
         grades1.add(15.0);
-        Nameable std1 = new Student("Zane",grades1);
+        Nameable std1 = new Student("Zane",grades1, Level.first);
 
         List<Double> grades2 = new ArrayList<Double>();
         grades2.add(16.0);
         grades2.add(16.0);
         grades2.add(16.0);
-        Nameable std2 = new Student("Yaw",grades2);
+        Nameable std2 = new Student("Yaw",grades2, Level.second);
 
         List<Double> grades3 = new ArrayList<Double>();
         grades3.add(17.0);
         grades3.add(17.0);
         grades3.add(17.0);
-        Nameable std3 = new Student("Ken",grades3);
+        Nameable std3 = new Student("Ken",grades3, Level.third);
 
         List<Nameable> studentList = new ArrayList<>();
         studentList.add(std1);

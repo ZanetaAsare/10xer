@@ -5,6 +5,7 @@ public class Register {
     private List<Nameable> studentList;
 
 
+
     public Register(List<Nameable> studentList) {
         this.studentList = studentList;
     }
@@ -16,4 +17,13 @@ public class Register {
         }
         return studentNames;
     }
+
+
+//    public List<String> getRegisterByLevel(Level l){
+//        for (Nameable s: studentList){
+//            if (s instanceof Student){
+//
+//            }
+//        }
+//    }
 }

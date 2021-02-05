@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student implements Nameable{
+public class Student implements Nameable, HasLevel{
     private String studentName;
     private List<Double> studentGrades = new ArrayList<Double>();
+    private Level studentLevel;
 
-    public Student(String studentName,List<Double> grades){
+    public Student(String studentName,List<Double> grades, Level studentLevel){
         this.studentName = studentName;
         this.studentGrades = grades;
+        this.studentLevel = studentLevel;
     }
 
     public double getAverageGrade(){
@@ -19,9 +21,13 @@ public class Student implements Nameable{
         return averageGrade;
     }
 
-
     @Override
     public String getName() {
         return studentName;
+    }
+
+    @Override
+    public Level getLevel() {
+        return this.studentLevel;
     }
 }
