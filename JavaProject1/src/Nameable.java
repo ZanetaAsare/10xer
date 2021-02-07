@@ -1,3 +1,3 @@
-public interface Nameable extends HasLevel{
+public interface Nameable{
     public String getName();
 }
