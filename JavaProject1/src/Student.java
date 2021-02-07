@@ -12,6 +12,7 @@ public class Student implements Nameable, HasLevel{
         this.studentLevel = studentLevel;
     }
 
+
     public double getAverageGrade(){
         double averageGrade, totalGrade = 0.0;
         for(double grade : this.studentGrades){

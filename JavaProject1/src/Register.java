@@ -10,6 +10,35 @@ public class Register {
         this.studentList = studentList;
     }
 
+    public boolean checkStudentName(String studentName) throws StudentNotFoundException{
+        boolean studentExists = false;
+        for (Student s: studentList){
+            if (s.getName().equals(studentName)){
+                studentExists = true;
+                break;
+            }
+        }
+        if(studentExists == false){
+            throw new StudentNotFoundException();
+        }
+        return studentExists;
+    }
+
+    public Student getStudentByName(String studentName ){
+        Student std = null;
+        try{
+            checkStudentName(studentName);
+            for (Student s: studentList){
+                if (s.getName().equals(studentName)){
+                    std =s;
+                }
+            }
+        }catch (StudentNotFoundException e){
+            System.out.println("Error");
+        }
+        return std;
+    }
+
     public List<String> getRegister() {
         List<String> studentNames = new ArrayList<>();
         for (Student s : studentList) {
