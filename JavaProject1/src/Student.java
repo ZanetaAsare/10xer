@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.DoubleStream;
 
 public class Student implements Nameable, HasLevel{
     private String studentName;
@@ -20,6 +21,17 @@ public class Student implements Nameable, HasLevel{
         }
         averageGrade = totalGrade / this.studentGrades.size();
         return averageGrade;
+    }
+
+    public DoubleStream getGrades(){
+        DoubleStream.Builder gradeStream = DoubleStream.builder();
+        for(Double grade:studentGrades){
+            gradeStream.add(grade);
+        }
+        gradeStream.build();
+
+        return ((DoubleStream)gradeStream).;
+
     }
 
     @Override

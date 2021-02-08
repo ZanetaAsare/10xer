@@ -36,7 +36,7 @@ class RegisterTest {
         Register studentNames = new Register(studentList);
         List<String> names= new ArrayList<>();
         names.add("Zane");
-        names.add("Yaop");
+        names.add("Yaw");
         names.add("Ken");
         Assertions.assertEquals(names,studentNames.getRegister());
         //Assertions.assertEquals(17, studentGroup.getHighestAverageGrade());
