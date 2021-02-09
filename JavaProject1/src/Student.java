@@ -24,13 +24,13 @@ public class Student implements Nameable, HasLevel{
     }
 
     public DoubleStream getGrades(){
-        DoubleStream.Builder gradeStream = DoubleStream.builder();
+        List<Double> gradeStream = new ArrayList<>();
         for(Double grade:studentGrades){
             gradeStream.add(grade);
         }
-        gradeStream.build();
 
-        return ((DoubleStream)gradeStream).;
+
+        return ((DoubleStream)gradeStream);
 
     }
 

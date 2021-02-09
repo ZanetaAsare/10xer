@@ -166,4 +166,34 @@ class RegisterTest {
         Register studentNames = new Register(studentList);
         Assertions.assertEquals(std1, studentNames.getStudentByName("Zane"));
     }
+
+    @Test
+    void getAllStudentAverage(){
+        List<Double> grades1 = new ArrayList<Double>();
+        grades1.add(15.0);
+        grades1.add(15.0);
+        grades1.add(15.0);
+        Student std1 = new NaughtyStudent("Zane",grades1);
+
+        List<Double> grades2 = new ArrayList<Double>();
+        grades2.add(16.0);
+        grades2.add(16.0);
+        grades2.add(16.0);
+        Student std2 = new NaughtyStudent("Yaw",grades2);
+
+        List<Double> grades3 = new ArrayList<Double>();
+        grades3.add(17.0);
+        grades3.add(17.0);
+        grades3.add(17.0);
+        Student std3 = new NaughtyStudent("Ken",grades3);
+
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(std1);
+        studentList.add(std2);
+        studentList.add(std3);
+
+        Register studentNames = new Register(studentList);
+
+        Assertions.assertEquals(16, studentNames.getHighestGrade());
+    }
 }
