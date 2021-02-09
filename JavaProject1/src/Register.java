@@ -60,8 +60,16 @@ public class Register {
     }
 
    public double getHighestGrade(){
-      List grades =  studentList.stream().map(g->g.getGrades().max()).collect(Collectors.toList());
-      return  3.0;
+        List<Double> grades = new ArrayList<>();
+        grades = studentList.stream().map(g->(g.getGrades().max()).getAsDouble()).collect(Collectors.toList());
+      return Collections.max(grades);
+   }
+
+   public double getAllStudentsAverage(){
+        double sum=0;
+       List<Double> grades = studentList.stream().map(g->g.getAverageGrade()).collect(Collectors.toList());
+      sum = grades.stream().reduce(0.0,(a,b)->a+b);
+      return grades.stream().mapToDouble(Double::doubleValue).sum()/grades.size();
    }
 
     public String printReport(){
